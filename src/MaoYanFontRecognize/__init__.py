@@ -1,0 +1,1 @@
+from MaoYanFontRecognize.main import MaoYanFont

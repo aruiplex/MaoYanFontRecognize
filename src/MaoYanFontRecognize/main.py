@@ -1,8 +1,10 @@
 import io
 import math
 import bs4
+import os 
 from fontTools.ttLib import TTFont
-
+import pkgutil
+from importlib import resources
 
 class MaoYanFont():
     """From MaoYan offical web font to translate from chars to numbers.
@@ -10,7 +12,13 @@ class MaoYanFont():
 
     def __init__(self):
         # base font to recognize other fonts.
-        self.font_base = TTFont("./font/iconfont0.woff")
+        # The path of package is
+        # d = pkgutil.get_data("MaoYanFontRecognize", "data/iconfont0.woff")
+        with resources.path("MaoYanFontRecognize", "iconfont0.woff") as path:
+            path_str = str(path)
+            # print(path_str)
+            self.font_base = TTFont(path_str)
+            
 
     def _max_points_in_region(self, l, d) -> float:
         """Count the points number of every points in a certain region.
@@ -120,5 +128,5 @@ class MaoYanFont():
         return rate, rate_num, money
 
 
-m = MaoYanFont()
-m.translate()
+# m = MaoYanFont()
+# m.translate()
