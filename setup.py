@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="maoyan-font-recognize-aruix",
+    name="maoyan-font-recognize",
     version="0.1.0",
     author="aruix",
     author_email="aruix@teaforence.com",

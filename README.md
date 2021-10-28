@@ -1,6 +1,10 @@
 # 猫眼字体识别
 
-该 github repo 在于帮助*xjtlu*的同学们识别猫眼的扭曲字体。已经打包上传至 `pypi` ，可以使用 `pip` 直接安装。
+该 github repo 在于帮助*xjtlu*的同学们识别猫眼的扭曲字体。已经打包上传至 [pypi](https://pypi.org/project/maoyan-font-recognize) ，可以使用 `pip` 直接安装。
+
+```sh
+pip install maoyan-font-recognize==0.1.0
+```
 
 猫眼字体的识别不出来的原理[在这里]()
 
