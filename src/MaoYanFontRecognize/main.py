@@ -105,7 +105,7 @@ class MaoYanFont():
             if char == ".":
                 result += "."
                 continue
-            i = str(self.char_to_num.char2num(char))
+            i = str(self._char2num(char))
             result += i
 
         return float(result)*base

@@ -2,11 +2,7 @@
 
 该 github repo 在于帮助*xjtlu*的同学们识别猫眼的扭曲字体。已经打包上传至 [pypi](https://pypi.org/project/maoyan-font-recognize) ，可以使用 `pip` 直接安装。
 
-```sh
-pip install maoyan-font-recognize==0.1.0
-```
-
-猫眼字体的识别不出来的原理[在这里]()
+猫眼字体的识别不出来的原理与解决思路[在采茶上](https://m.teaforence.com/teapost/119)
 
 使用方法：
 
@@ -42,6 +38,17 @@ rate, rate_num, money = m.translate(rate_raw, rate_num_raw, font_file, money_raw
     ```
 
 3. `rate_num_raw`: 未经处理的评分人数，
-4. `font_file`: 每一个电影的详情页都会有一个新生成的字体，这个属性需要这个字体文件的`io.BytesIO()`的形式，
+4. `font_file`: 每一个电影的详情页都会有一个新生成的字体，这个属性需要这个字体文件的`io.BytesIO()`的形式，建议通过网页上的详情把字体下载下来再传进来。
 5. `money_raw`: 未经处理的票房, 
 6. `money_unit`: 票房单位。
+
+
+## 测试
+
+测试结果：
+
+![image-20211028213546725](image-20211028213546725.png)
+
+输出： `2 extra bytes in post.stringData array`，是TTFont库造成的，不会影响正常使用。
+
+
