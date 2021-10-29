@@ -9,7 +9,7 @@
 ```python
 import MaoYanFontRecognize
 
-m = MaoYanFontRecognize()
+m = MaoYanFontRecognize.MaoYanFont()
 rate, rate_num, money = m.translate(rate_raw, rate_num_raw, font_file, money_raw= -1, money_unit=1)
 
 ```
