@@ -123,6 +123,7 @@ class MaoYanFont():
         self._set_new_fonts(font_file)
         rate = self._maoyan_formatter(rate_raw)
         rate_num = self._maoyan_formatter(rate_num_raw)
+        money = -1
         if money_raw != -1:
             money = self._maoyan_formatter(money_raw, money_unit)
         return rate, rate_num, money

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="maoyan-font-recognize",
-    version="0.1.0",
+    version="0.1.3",
     author="aruix",
     author_email="aruix@teaforence.com",
     description="A lib to recognize MaoYan font from the offical website.",
