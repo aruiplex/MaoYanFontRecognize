@@ -9,10 +9,15 @@
 ```python
 import MaoYanFontRecognize
 
-m = MaoYanFontRecognize()
+m = MaoYanFontRecognize.MaoYanFont()
 rate, rate_num, money = m.translate(rate_raw, rate_num_raw, font_file, money_raw= -1, money_unit=1)
 
 ```
+
+更细致的使用方式请看[test](https://github.com/aruiplex/MaoYanFontRecognize/blob/main/tests/test.py)。
+
+_**请注意**_，每一个电影的详情页的字体都是猫眼特殊生成的。也就是说，每次刷新之后的字体文件都是不一样的。所以要把每一个详情页中的字体文件同时下载下来，当成参数`font_file`使用。
+
 
 参数解释：
 
@@ -50,5 +55,6 @@ rate, rate_num, money = m.translate(rate_raw, rate_num_raw, font_file, money_raw
 ![image-20211028213546725](image-20211028213546725.png)
 
 输出： `2 extra bytes in post.stringData array`，是TTFont库造成的，不会影响正常使用。
+
 
 
